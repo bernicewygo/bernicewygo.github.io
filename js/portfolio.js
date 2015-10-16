@@ -7,7 +7,7 @@ $(function() {
 		if (val.description != "") {
 			hasDescription = "</b> - ";
 		}
-		items.push( "<div class='col-md-4 portfolio'><p class='title'>" + val.type +"</p><img class='image' src='img/portfolio/" + val.img + "'><b>" + val.title + hasDescription + val.description + "</div>" );
+		items.push( "<div class='col-sm-4 portfolio'><p class='title'>" + val.type +"</p><img class='image' src='img/portfolio/" + val.img + "'><b>" + val.title + hasDescription + val.description + "</div>" );
 	  });
 	 
 	  var result = items.join( "" );
