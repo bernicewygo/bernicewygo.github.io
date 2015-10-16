@@ -3,7 +3,7 @@ body {
     height: 100%;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
-    background-color: #000;
+    background-color: #3E3E3E;
 }
 
 html {
@@ -56,11 +56,11 @@ a:focus {
 }
 
 .navbar-custom {
-    margin-bottom: 0;
-    border-bottom: 1px solid rgba(255,255,255,.3);
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #000;
+	margin-bottom: 0;
+	border-bottom: 1px solid rgba(255,255,255,.3);
+	text-transform: uppercase;
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	background-color: #3E3E3E;
 }
 
 .navbar-custom .navbar-brand {
@@ -130,7 +130,7 @@ a:focus {
     .navbar-custom.top-nav-collapse {
         padding: 0;
         border-bottom: 1px solid rgba(255,255,255,.3);
-        background: #000;
+        background: rgba(62, 62, 62, 0.6);
     }
 }
 
