@@ -2,6 +2,30 @@
   {
     "img": "0002.png",
     "year": 2015,
+    "title": "Hearthstats",
+    "type": "Vector",
+    "description": "newsletter vectors",
+    "link": ""
+  },
+  {
+    "img": "0002.png",
+    "year": 2015,
+    "title": "NeuRecall",
+    "type": "Web Design",
+    "description": "homepage",
+    "link": ""
+  },
+  {
+    "img": "0002.png",
+    "year": 2015,
+    "title": "NeuRecall",
+    "type": "Vector",
+    "description": "personas",
+    "link": ""
+  },
+  {
+    "img": "0002.png",
+    "year": 2015,
     "title": "Not Your Average Netizens",
     "type": "Logo",
     "description": "",
@@ -15,5 +39,4 @@
     "description": "",
     "link": ""
   }
-
 ]
