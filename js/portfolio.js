@@ -30,7 +30,9 @@ $(function() {
 	});
 });
 
-$('#minus3').addClass('hide'); 
+remove('#minus3'); 
+if (index < perpage)
+	remove('#plus3'); 
 
 
 $('#plus3').click(function(){
