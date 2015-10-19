@@ -1,6 +1,6 @@
 [
   {
-    "img": "0002.png",
+    "img": "hearthstats.png",
     "year": 2015,
     "title": "Hearthstats",
     "type": "Vector",
@@ -8,23 +8,31 @@
     "link": ""
   },
   {
-    "img": "0002.png",
+    "img": "neurecall_homepage.png",
     "year": 2015,
     "title": "NeuRecall",
     "type": "Web Design",
     "description": "homepage",
+    "link": "1-1.jpg"
+  },
+  {
+    "img": "neurecall_logo.png",
+    "year": 2015,
+    "title": "NeuRecall",
+    "type": "Logo",
+    "description": "",
     "link": ""
   },
   {
-    "img": "0002.png",
+    "img": "neurecall_personas.png",
     "year": 2015,
     "title": "NeuRecall",
     "type": "Vector",
     "description": "personas",
-    "link": ""
+    "link": "1-1.png"
   },
   {
-    "img": "0002.png",
+    "img": "notyouraveragenetizens.png",
     "year": 2015,
     "title": "Not Your Average Netizens",
     "type": "Logo",

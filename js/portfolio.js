@@ -1,4 +1,4 @@
-var index = 0; 
+var index = -1; 
 var show = 0; 
 
 $(function() {
@@ -33,21 +33,49 @@ $('#plus3').click(function(){
 		var name = '#item' + (show + i);
 		remove(name);  
 	}
+	show += 3; 
 	while ( (index - show) >= 0) {
-		show++; 
 		var name = '#item' + show; 
-		if (counter > 3)
+		if (counter > 3) {
 			break; 
-		$(name).removeClass('hide');
+		}
+		add(name); 
 		counter++;
+		show++; 
 	}
+	show--; 
 	if ($('#minus3').hasClass('hide'))
-		$('#minus3').removeClass('hide'); 
+		add('#minus3');
 	if (index == show)
+		remove(this); 
+}); 
+
+$('#minus3').click(function(){
+	var counter = 0; 
+	for (var i = 0; i < 3; i++) {
+		var name = '#item' + (show - i);
+		remove(name);  
+	}
+	show -= 2; 
+	while ( show >= 0) {
+		var name = '#item' + show; 
+		if (counter > 3) {
+			break; 
+		}
+		add(name); 
+		counter++;
+		show--; 
+	}
+	show++; 
+	if ($('#plus3').hasClass('hide'))
+		add('#plus3');
+	if (0 == show)
 		remove(this); 
 }); 
 
 function remove(n) {
 	$(n).addClass('hide');		
-		console.log(n);
+}
+function add(n) {
+	$(n).removeClass('hide');
 }
