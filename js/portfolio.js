@@ -18,9 +18,9 @@ $(function() {
 		}
 
 		if (key < perpage) {
-			items.push( "<div class='col-sm-4 portfolio' id='item" + key + "'><p class='title'>" + val.type +"</p><a href='img/portfolio/" + link + "' data-lightbox='item" + key + "'><img class='image' src='img/portfolio/" + val.img + "'></a><b>" + val.title + hasDescription + val.description + "</div>" );
+			items.push( "<div class='col-sm-4 portfolio' id='item" + key + "'><p class='title'>" + val.type +"</p><a href='img/portfolio/" + link + "' data-lightbox='item" + key + "'><img class='image' src='img/portfolio/" + val.img + "'></a><strong>" + val.title + '</strong>' + hasDescription + val.description + "</div>" );
 		} else {
-			items.push( "<div class='col-sm-4 portfolio hide' id='item" + key + "'><p class='title'>" + val.type +"</p><a href='img/portfolio/" + link + "' data-lightbox='item" + key + "'><img class='image' src='img/portfolio/" + val.img + "'></a><b>" + val.title + hasDescription + val.description + "</div>" );
+			items.push( "<div class='col-sm-4 portfolio hide' id='item" + key + "'><p class='title'>" + val.type +"</p><a href='img/portfolio/" + link + "' data-lightbox='item" + key + "'><img class='image' src='img/portfolio/" + val.img + "'></a><strong>" + val.title + '</strong>' + hasDescription + val.description + "</div>" );
 
 		}
 	  });
