@@ -27,15 +27,18 @@ $(function() {
 			items.push("<div class='clearfix visible-lg-block visible-sm-block visible-med-block'></div>");
 		}
 	  });
+
+		if (index < perpage)
+			remove('#plus3'); 
 	 
 	  var result = items.join( "" );
 	  $( '#portfolio_entries' ).append(result);
 	});
+
 });
 
 remove('#minus3'); 
-if (index < perpage)
-	remove('#plus3'); 
+
 
 
 $('#plus3').click(function(){
@@ -67,13 +70,13 @@ $('#minus3').click(function(){
 		var name = '#item' + (show - i);
 		remove(name);  
 	}
-	show -= perpage - 1; 
-	console.log(show); 
+	show -= perpage; 
 	while ( show >= 0) {
 		var name = '#item' + (show + counter); 
-		if (counter > perpage) {
+		if (counter >= perpage) {
 			break; 
 		}
+	console.log(name); 
 		add(name); 
 		counter++;
 	}
