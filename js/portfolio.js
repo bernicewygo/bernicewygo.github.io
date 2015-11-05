@@ -23,6 +23,9 @@ $(function() {
 			items.push( "<div class='col-sm-4 portfolio hide' id='item" + key + "'><p class='title'>" + val.type +"</p><a href='img/portfolio/" + link + "' data-lightbox='item" + key + "'><img class='image' src='img/portfolio/" + val.img + "'></a><strong>" + val.title + '</strong>' + hasDescription + val.description + "</div>" );
 
 		}
+		if (key%3 == 2) {
+			items.push("<div class='clearfix visible-lg-block visible-sm-block visible-med-block'></div>");
+		}
 	  });
 	 
 	  var result = items.join( "" );
