@@ -422,3 +422,24 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
+
+.pager {
+    padding-left: 100px; 
+    padding-right: 100px;
+
+}
+    .pager li>span {
+         background: none;   
+         border: 1px solid #41BCDC;    
+         color: #41BCDC;
+         font-size: 40px;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+    .pager li>span:hover {
+         background: #41BCDC;   
+         border: 1px solid #41BCDC;    
+         color: #fff;
+         font-size: 40px;
+    }    
