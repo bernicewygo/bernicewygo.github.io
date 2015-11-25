@@ -68,19 +68,9 @@ p {
 	    -webkit-transition: opacity .3s ease-in-out;
 		opacity: 1;
 	}	
-@media(max-width:768px) {
-	.portfolio {
-		width: 100%;
-	}
-}
-
-@media(min-width:768px) {
-    p {
-        margin: 0 0 35px;
-        font-size: 20px;
-        line-height: 1.6;
-    }
-=}
+.content-section {
+        min-height:800px;
+}   
 
 a {
     color: #42dca3;
@@ -160,7 +150,63 @@ a:focus {
     color: #fff;
 }
 
+
+.intro {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background-color: #4D4D4D;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    z-index:10;
+}
+
+.intro .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.intro .intro-body .brand-heading {
+    font-size: 40px;
+}
+
+.intro .intro-body .intro-text {
+    font-size: 18px;
+    text-align: center;
+}
+
+#about {
+    min-height:800px;
+    z-index:1;
+}
+#portfolio {
+    min-height:800px;
+    z-index:10;
+}
+.download-section{
+     min-height:500px;
+}
+#contact {
+    z-index:1;
+}
+
+@media(max-width:768px) {
+    .portfolio {
+        width: 100%;
+    }
+}
+
 @media(min-width:768px) {
+    p {
+        margin: 0 0 35px;
+        font-size: 20px;
+        line-height: 1.6;
+    }
     .navbar-custom {
         padding: 20px 0;
         border-bottom: 0;
@@ -176,33 +222,6 @@ a:focus {
         border-bottom: 1px solid rgba(255,255,255,.3);
         background: rgba(62, 62, 62, 0.6);
     }
-}
-
-.intro {
-    display: table;
-    width: 100%;
-    height: auto;
-    padding: 100px 0;
-    text-align: center;
-    color: #fff;
-    background-color: #4D4D4D;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-.intro .intro-body {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.intro .intro-body .brand-heading {
-    font-size: 40px;
-}
-
-.intro .intro-body .intro-text {
-    font-size: 18px;
 }
 
 @media(min-width:768px) {
@@ -378,7 +397,13 @@ ul.banner-social-buttons {
     }
 }
 
+/* SMALLER STUFF */
+
 @media(max-width:767px) {
+
+#contact{
+    min-height: 800px;
+}
     ul.banner-social-buttons li {
         display: block;
         margin-bottom: 20px;

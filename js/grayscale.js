@@ -22,10 +22,32 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+    $.stellar({
+          verticalScrolling: true,
+          horizontalScrolling:true,
+          scrollProperty: 'scroll',
+          responsive: true,
+          positionProperty: 'transform',
+          parallaxElements: true,
+          hideElement: function($elem) {  },
+    });
+
+/*
+    $('#portcontainer').fadeOut();
+    var WP_portcontainer = new Waypoint({
+      element: document.getElementById('portfolio'),
+      handler: function() {
+        $('#portcontainer').fadeIn();
+      }
+    })    
+    var WP_contact = new Waypoint({
+      element: document.getElementById('contact'),
+      handler: function(down) {
+        $('#portcontainer').fadeOut();
+      }
+    })    
+*/
+
 });
 
-// Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
-});
 
