@@ -46,7 +46,7 @@
                 <div class="panel noborder" ng-show="panel.isSelected(1)">
                     <div class="portfolio">
                         <div ng-repeat="i in infos" class="portfolioItem">
-                            <a ng-href="{{ '#item' + $index }}" data-toggle="modal"><img ng-src="img/portfolio/{{i.img}}" class="portfolioImg" alt="Description" /></a>
+                            <a ng-href="{{ '#item' + $index }}" data-toggle="modal"><img ng-src="img/portfolio/{{i.img}}" class="portfolioImg" ng-alt="{{ i.title }}" /></a>
 
                              <!-- Modal -->
                             <div ng-attr-id="{{ 'item' + $index }}" class="modal fade" role="dialog">
@@ -57,7 +57,13 @@
                                   <div class="modal-body">
  
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                   <p>Some text in the modal.</p>
+                                   <p>
+                                    <span ng-switch on="'{{i.link}}'">
+                                        <img ng-switch-when="" ng-src="img/portfolio/{{i.img}}">
+                                        <img ng-switch-default ng-src="img/portfolio/{{i.link}}">                                
+
+                                    </span>
+                                    </p>
                                   </div>
                                 </div>
 
