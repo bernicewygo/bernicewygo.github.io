@@ -154,7 +154,11 @@ footer {
 
 .modal {
         top:150px;
-        width:100%;
+}
+
+.modal-dialog{
+        width:80%;
+
 }
 
 /* mobile */
