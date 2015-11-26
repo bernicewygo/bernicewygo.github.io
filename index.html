@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="portfolio">
 
 <head>
 
@@ -13,7 +13,7 @@
 
     <!-- CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/grayscale.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link href="css/lightbox.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
@@ -28,107 +28,53 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body>
+    <div ng-controller="portfolioController">
+        <section ng-controller="panelController as panel">
+            <header>
+            <div id="title">BERNICE GO</div>
+                <div id="nav" ng-init="tab = 1" >
+                    <ul>
+                        <li ng-class="{ active:panel.isSelected(1) }"><a href ng-click="panel.selectTab(1)" class="navi">portfolio</a></li>
+                        <li ng-class="{ active:panel.isSelected(2) }"><a href ng-click="panel.selectTab(2)" class="navi">resume</a></li>
+                        <li ng-class="{ active:panel.isSelected(3) }"><a href ng-click="panel.selectTab(3)" class="navi">contact</a></li>
+                    </ul>
+                </div>
+            </header>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-rocket"></i>  <span class="light">Bernice Go</span>
-                </a>
-            </div>
+            <div id="content">
+                <div class="panel noborder" ng-show="panel.isSelected(1)">
+                    <div class="portfolio">
+                        <div ng-repeat="i in infos" class="portfolioItem">
+                            <a ng-href="{{ '#item' + $index }}" data-toggle="modal"><img ng-src="img/portfolio/{{i.img}}" class="portfolioImg" alt="Description" /></a>
 
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">Resume</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+                             <!-- Modal -->
+                            <div ng-attr-id="{{ 'item' + $index }}" class="modal fade" role="dialog">
+                              <div class="modal-dialog">
 
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Bernice Go</h1>
-                        <p class="intro-text">Business Administration and Computer Science Double Degree Student</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                  <div class="modal-body">
+ 
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                   <p>Some text in the modal.</p>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </header>
 
-    <!-- Resume Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Resume</h2>
-                <ul class="list-inline banner-social-buttons">
-                    <li><span class="btn btn-default btn-lg">Online View</span>
-                        
-                    </li>
-                    <li><span class="btn btn-default btn-lg">PDF View</span>
-                    </li>
-                 </ul>
-             </div>
-        </div>
-    </section>
+                <div class="panel" ng-show="panel.isSelected(2)">
+                </div>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="content-section text-center center-block">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Portfolio</h2>
-                    <div class="row" id="portfolio_entries">
-                    	 <!-- Entries will appear here -->
-					</div>	
-                    <br>
-                    <nav>
-                      <ul class="pager">
-                        <li class="previous minus3 btn btn-lg" id="minus3"><span class="glyphicon glyphicon-chevron-left"></span></li>
-                        <li class="next plus3 btn btn-lg" id="plus3"><span class="glyphicon glyphicon-chevron-right"></span></li>
-                      </ul>
-                    </nav>                 
+                <div class="panel" ng-show="panel.isSelected(3)">
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact</h2>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Map Section -->
-    <div id="map"></div>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -141,8 +87,11 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
-    <script src="js/lightbox.js"></script>
-    <script src="js/grayscale.js"></script>
+    <script src="js/lightbox.js"></script>   
+    <script src="bower_components/stellar.js/src/jquery.stellar.js"></script>
+    <script src="bower_components/waypoints/lib/noframework.waypoints.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="js/bernice.js"></script>
     <script src="js/portfolio.js"></script>
 
 </body>
