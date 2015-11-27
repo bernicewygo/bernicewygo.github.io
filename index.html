@@ -21,6 +21,8 @@
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
+    <!-- Other Sources -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -29,7 +31,7 @@
 </head>
 
 <body>
-    <div ng-controller="portfolioController">
+    <div ng-controller="portfolioController" class="wrapper">
         <section ng-controller="panelController as panel">
             <header>
             <div id="title">BERNICE GO</div>
@@ -42,7 +44,7 @@
                 </div>
             </header>
 
-            <div id="content">
+            <div id="content" class="text-center">
                 <div class="panel noborder" ng-show="panel.isSelected(1)">
                     <div class="portfolio">
                         <div ng-repeat="i in infos" class="portfolioItem">
@@ -80,10 +82,30 @@
                 <div class="panel" ng-show="panel.isSelected(2)">
                 </div>
 
-                <div class="panel" ng-show="panel.isSelected(3)">
+                <div class="panel contact " ng-show="panel.isSelected(3)">
+                    <div class="" ng-controller="recapCtrl as recap">
+                        <span class="contactTitle">Contact form</span>
+                        <form class="contactForm" name="recap.signupForm" ng-submit="recap.signup()">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" ng-model="recap.name" placeholder="Enter Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email </label>
+                                <input type="email" class="form-control" ng-model="recap.email" placeholder="Enter email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea type="message" class="form-control" ng-model="recap.password" placeholder="Message here" required></textarea>
+                            </div>
+                            <div class="center"><div class="g-recaptcha" vc-recaptcha key="recap.publicKey"></div></div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>        
                 </div>
             </div>
         </section>
+        <div class="push"></div>
     </div>
 
     <!-- Footer -->
@@ -101,9 +123,9 @@
     <script src="bower_components/stellar.js/src/jquery.stellar.js"></script>
     <script src="bower_components/waypoints/lib/noframework.waypoints.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-recaptcha/release/angular-recaptcha.min.js"></script>
     <script src="js/bernice.js"></script>
     <script src="js/portfolio.js"></script>
-
 </body>
 
 </html>
