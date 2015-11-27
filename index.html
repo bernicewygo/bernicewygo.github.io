@@ -54,16 +54,20 @@
 
                                 <!-- Modal content-->
                                 <div class="modal-content">
-                                  <div class="modal-body">
+                                  <div class="modal-body ">
  
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                   <p>
-                                    <span ng-switch on="'{{i.link}}'">
-                                        <img ng-switch-when="" ng-src="img/portfolio/{{i.img}}">
-                                        <img ng-switch-default ng-src="img/portfolio/{{i.link}}">                                
-
-                                    </span>
-                                    </p>
+                                    <div class="portfolioInfo">
+                                        <span ng-switch on="'{{i.link}}'" class="modalbox">
+                                            <img ng-switch-when="" ng-src="img/portfolio/{{i.img}}" class="modalimg">
+                                            <img ng-switch-default ng-src="img/portfolio/{{i.link}}" class="modalimg">
+                                        </span>
+                                        <p class="modalbox">
+                                        <span class="portfolioType">{{ i.type }}</span>
+                                        <span class="portfolioTitle">{{ i.title }}</span>
+                                        <span class="portfolioDesc"  ng-bind-html="getHTMLvalue(i.description)"></span>
+                                        </p>
+                                    </div>
                                   </div>
                                 </div>
 
