@@ -46,7 +46,7 @@
 				}
 				
 				/* Make Ajax request to our server with g-captcha-string */
-				$http.post('http://code.ciphertrick.com/demo/phpapi/api/signup',post_data).success(function(response){
+				$http.post('api/routes/site.php',post_data).success(function(response){
 					if(response.error === 0){
 						alert("Successfully verified and signed up the user");
 					}else{
