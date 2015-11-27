@@ -111,7 +111,9 @@ h6 {
 .panel {
     float: left;
     margin: auto;
+    border: 0px !important;
     background: #00BCD4 !important;
+    box-shadow: none !important;
     z-index: 5;
 }
 
@@ -190,6 +192,8 @@ h6 {
     text-align: center;
     display:inline-block;
     color: #ffffff;
+    border: none;
+    box-shadow: none;
 }
    
     .contactTitle {

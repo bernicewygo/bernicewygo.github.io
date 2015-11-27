@@ -79,28 +79,19 @@
                     </div>
                 </div>
 
-                <div class="panel" ng-show="panel.isSelected(2)">
+                <div class="panel contact" ng-show="panel.isSelected(2)">
+                        <p class="contactTitle">RESUME</p>
+                        <p class="contactForm">
+                            <br>View PDF
+                        </div>
                 </div>
 
                 <div class="panel contact " ng-show="panel.isSelected(3)">
                     <div class="" ng-controller="recapCtrl as recap">
-                        <span class="contactTitle">Contact form</span>
-                        <form class="contactForm" name="recap.signupForm" ng-submit="recap.signup()">
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" class="form-control" ng-model="recap.name" placeholder="Enter Name" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Email </label>
-                                <input type="email" class="form-control" ng-model="recap.email" placeholder="Enter email" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Message</label>
-                                <textarea type="message" class="form-control" ng-model="recap.password" placeholder="Message here" required></textarea>
-                            </div>
-                            <div class="center"><div class="g-recaptcha" vc-recaptcha key="recap.publicKey"></div></div>
-                            <button type="submit" class="btn btn-default">Submit</button>
-                        </form>
+                        <p class="contactTitle">Contact</p>
+                        <p class="contactForm">
+                            <br>Feel free to contact me at my gmail - bernicewygo
+                        </div>
                     </div>        
                 </div>
             </div>
