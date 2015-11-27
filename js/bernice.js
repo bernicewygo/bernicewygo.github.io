@@ -46,7 +46,7 @@
 				}
 				
 				/* Make Ajax request to our server with g-captcha-string */
-				$http.post('sent.html',post_data).success(function(response){
+				$http.post('http://strawberry-tenshi.net/api',post_data).success(function(response){
 					if(response.error === 0){
 						alert("Messaged");
 					}else{
