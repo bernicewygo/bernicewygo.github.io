@@ -46,9 +46,9 @@
 				}
 				
 				/* Make Ajax request to our server with g-captcha-string */
-				$http.post('api/routes/site.php',post_data).success(function(response){
+				$http.post('sent.html',post_data).success(function(response){
 					if(response.error === 0){
-						alert("Successfully verified and signed up the user");
+						alert("Messaged");
 					}else{
 						alert("User verification failed");
 					}
