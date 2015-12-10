@@ -37,7 +37,7 @@
             <header>
             <div id="title">BERNICE GO</div>
                  <p id="subtitle">A FREELANCE WEB & GRAPHICS DESIGNER</p>            
-                <div id="nav" ng-init="tab = 1" >
+                <div id="nav" ng-init="tab = 1">
                     <ul>
                         <li ng-class="{ active:panel.isSelected(1) }"><a href ng-click="panel.selectTab(1)" class="navi">portfolio</a></li>
                         <li ng-class="{ active:panel.isSelected(2) }"><a href ng-click="panel.selectTab(2)" class="navi">resume</a></li>
@@ -85,16 +85,16 @@
                         <p class="contactTitle">RESUME</p>
                         <p class="contactForm">
                             <br>View <a href="resume.pdf">PDF</a>
-                        </div>
                 </div>
 
-                <div class="panel contact " ng-show="panel.isSelected(3)">
-                    <div class="" ng-controller="recapCtrl as recap">
+                <div class="panel contact" ng-show="panel.isSelected(3)">
                         <p class="contactTitle">Contact</p>
                         <p class="contactForm">
                             <br>Feel free to <a href="http://sites.strawberry-tenshi.net/#contact">contact me</a>, or send me a note on gmail - bernicewygo
-                        </div>
-                    </div>        
+                </div>                  
+                </div>
+
+      
                 </div>
             </div>
         </section>

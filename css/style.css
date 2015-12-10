@@ -261,5 +261,20 @@ footer {
 
 /* mobile */
 @media only screen and (max-width: 480px) {
-
+    #nav {
+        width: 100% !important;
+        clear: both;
+        text-align: center;
+        display: block !important;
+            background-color: #00BCD4;
+    }
+       #nav li {
+        width: 100%;
+       }
+    .portfolio {
+        width: 100%;
+        clear: both;
+        display:block;
+        margin: 0px;
+    }
 }
