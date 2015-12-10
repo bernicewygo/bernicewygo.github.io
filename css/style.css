@@ -50,6 +50,16 @@ h6 {
     background-color: #fff;
     color: #727272;
 }
+#subtitle {
+    font-size: 1em; 
+    width:100%;
+    background-color: #fff;
+    color: #727272;    
+    margin-top: -10px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    border: none;
+}
 
 #nav {
     float: left;    

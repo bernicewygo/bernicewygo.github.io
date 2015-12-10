@@ -11,6 +11,7 @@
 
     <title>Bernice Go</title>
 
+
     <!-- CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -35,6 +36,7 @@
         <section ng-controller="panelController as panel">
             <header>
             <div id="title">BERNICE GO</div>
+                 <p id="subtitle">A FREELANCE WEB & GRAPHICS DESIGNER</p>            
                 <div id="nav" ng-init="tab = 1" >
                     <ul>
                         <li ng-class="{ active:panel.isSelected(1) }"><a href ng-click="panel.selectTab(1)" class="navi">portfolio</a></li>
@@ -90,7 +92,7 @@
                     <div class="" ng-controller="recapCtrl as recap">
                         <p class="contactTitle">Contact</p>
                         <p class="contactForm">
-                            <br>Feel free to contact me at my gmail - bernicewygo
+                            <br>Feel free to <a href="http://sites.strawberry-tenshi.net/#contact">contact me</a>, or send me a note on gmail - bernicewygo
                         </div>
                     </div>        
                 </div>
