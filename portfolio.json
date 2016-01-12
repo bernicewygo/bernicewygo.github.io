@@ -15,14 +15,6 @@
     "description": "Membership card design contest entry",
     "link": ""
   },
-  {
-    "img": "linkanimation.gif",
-    "year": 2015,
-    "title": "Link Animation",
-    "type": "Code Snippet",
-    "description": "Hovering over links gives a simple animation on the border. See <a href='http://codepen.io/bernicewygo/details/WQgMJB/'>codepen</a> for demo.",
-    "link": ""
-  },
     {
     "img": "hearthstats.png",
     "year": 2015,
