@@ -15,7 +15,6 @@
          };       
 	});
 
-
 	app.controller('workController', function($scope, $http, $sce) {
 	  $http.get('http://bernicewygo.github.io/work.json')
 	       .then(function(response){

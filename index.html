@@ -52,13 +52,14 @@
                 <div class="panel" ng-show="panel.isSelected(1)">
                     <div class="portfolio">
                         <div ng-repeat="i in infos" class="portfolioItem">
-                            <a ng-href="{{ '#item' + $index }}" data-toggle="modal"><img ng-src="img/portfolio/{{i.img}}" class="portfolioImg" ng-alt="{{ i.title }}" /></a>
-
-                             <!-- Modal -->
+                            <span ng-switch on="'{{i.link}}'">
+                                <a ng-switch-when="" ng-href="img/portfolio/{{i.img}}" data-lightbox="port"><img ng-src="img/portfolio/{{i.img}}" class="portfolioImg" ng-alt="{{ i.title }}" /></a>
+                                <a ng-switch-default ng-href="img/portfolio/{{i.link}}" data-lightbox="port"><img ng-src="img/portfolio/{{i.img}}" class="portfolioImg" ng-alt="{{ i.title }}" /></a>
+                            </span>
+                            <!-- Modal 
                             <div ng-attr-id="{{ 'item' + $index }}" class="modal fade" role="dialog">
                               <div class="modal-dialog">
 
-                                <!-- Modal content-->
                                 <div class="modal-content">
                                   <div class="modal-body ">
  
@@ -78,7 +79,7 @@
                                 </div>
 
                               </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -97,8 +98,8 @@
                                         <div ng-repeat="i in work" class="workItem">
                                            <div class="callout small">
                                               <h3>{{ i.title }}</h3>
-                                              <h4>Company // Date</h4> 
-                                              <p>It's dangerous to go alone, take this.</p>
+                                              <h4>{{ i.company }} // {{ i.date }}</h4> 
+                                              <p></p>
                                             </div>
                                         </div>
                                     </div>     

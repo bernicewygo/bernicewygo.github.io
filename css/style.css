@@ -148,18 +148,29 @@ footer {
   font-size: 1em;
 }
 
-/* line 145, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
+.portfolioItem {
+  display: inline;
+}
+
+/* line 150, ../sass/style.scss */
+.portfolioImg {
+  max-width: 400px;
+  padding-top: 5px;
+}
+
+/* line 155, ../sass/style.scss */
 .push {
   height: 4em;
 }
 
-/* line 149, ../sass/style.scss */
+/* line 159, ../sass/style.scss */
 .viewpdf {
   padding-top: 20px;
   text-align: center;
 }
 
-/* line 154, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 .wrapper {
   min-height: 100%;
   height: auto !important;
@@ -168,10 +179,19 @@ footer {
 }
 
 /* =============
+    small screen
+   ============= */
+@media only screen and (max-width: 40em) {
+  /* line 175, ../sass/style.scss */
+  .portfolioImg {
+    max-width: 100%;
+  }
+}
+/* =============
     large screen
    ============= */
 @media only screen and (min-width: 64.063em) {
-  /* line 165, ../sass/style.scss */
+  /* line 184, ../sass/style.scss */
   .largecenter {
     text-align: center;
   }

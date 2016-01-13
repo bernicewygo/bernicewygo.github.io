@@ -142,6 +142,16 @@ footer {
 	color: $color-light;
 	font-size: 1em;
 }
+
+.portfolioItem {
+	display: inline;
+}
+
+.portfolioImg {
+	max-width: 400px; 
+	padding-top: 5px; 
+}
+
 .push {
 	height: 4em;
 }
@@ -156,6 +166,15 @@ footer {
 	height: auto !important;
 	height: 100%;
 	margin: 0 auto -3em; 	
+}
+
+/* =============
+    small screen
+   ============= */
+@media only screen and (max-width: 40em) { 
+	.portfolioImg {
+		max-width: 100%; 
+	}
 }
 
 /* =============
