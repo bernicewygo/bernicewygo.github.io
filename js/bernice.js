@@ -15,10 +15,11 @@
          };       
 	});
 
+
 	app.controller('workController', function($scope, $http, $sce) {
 	  $http.get('http://bernicewygo.github.io/work.json')
-	       .then(function(res){
-	          $scope.infos = res.data;                
+	       .then(function(response){
+	          $scope.work = response.data;                
 	        });
 
 		$scope.getHTMLvalue = function(html) {
