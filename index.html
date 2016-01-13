@@ -13,7 +13,7 @@
 
 
     <!-- CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/foundation-sites/dist/foundation-flex.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/lightbox.css" rel="stylesheet">
 
@@ -21,9 +21,9 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
     <!-- Other Sources -->
-    <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -34,29 +34,32 @@
 <body>
     <div ng-controller="portfolioController" class="wrapper">
         <section ng-controller="panelController as panel">
-            <header>
+            <header class="navbar">
             <div id="title">BERNICE GO</div>
-                 <p id="subtitle">A FREELANCE WEB & GRAPHICS DESIGNER</p>            
-                <div id="nav" ng-init="tab = 1">
-                    <ul>
-                        <li ng-class="{ active:panel.isSelected(1) }"><a href ng-click="panel.selectTab(1)" class="navi">portfolio</a></li>
-                        <li ng-class="{ active:panel.isSelected(2) }"><a href ng-click="panel.selectTab(2)" class="navi">resume</a></li>
-                        <li ng-class="{ active:panel.isSelected(3) }"><a href ng-click="panel.selectTab(3)" class="navi">contact</a></li>
-                    </ul>
+                <p id="subtitle">A FREELANCE WEB & GRAPHICS DESIGNER</p>
+                <div class="row">            
+                    <div id="nav" ng-init="tab = 2" class="center">
+                        <ul class="menu simple expanded navmenu">
+                            <li ng-class="{ active:panel.isSelected(1) }"><a href ng-click="panel.selectTab(1)" class="navi center">portfolio</a></li>
+                            <li ng-class="{ active:panel.isSelected(2) }"><a href ng-click="panel.selectTab(2)" class="navi center">resume</a></li>
+                            <li ng-class="{ active:panel.isSelected(3) }"><a href ng-click="panel.selectTab(3)" class="navi center">contact</a></li>
+                        </ul>
+                    </div>
                 </div>
             </header>
 
-            <div id="content" class="text-center">
-                <div class="panel noborder" ng-show="panel.isSelected(1)">
+            <div id="content" class="center">
+                <div class="panel" ng-show="panel.isSelected(1)">
                     <div class="portfolio">
                         <div ng-repeat="i in infos" class="portfolioItem">
-                            <a ng-href="{{ '#item' + $index }}" data-toggle="modal"><img ng-src="img/portfolio/{{i.img}}" class="portfolioImg" ng-alt="{{ i.title }}" /></a>
-
-                             <!-- Modal -->
+                            <span ng-switch on="'{{i.link}}'">
+                                <a ng-switch-when="" ng-href="img/portfolio/{{i.img}}" data-lightbox="port"><img ng-src="img/portfolio/{{i.img}}" class="portfolioImg" ng-alt="{{ i.title }}" /></a>
+                                <a ng-switch-default ng-href="img/portfolio/{{i.link}}" data-lightbox="port"><img ng-src="img/portfolio/{{i.img}}" class="portfolioImg" ng-alt="{{ i.title }}" /></a>
+                            </span>
+                            <!-- Modal 
                             <div ng-attr-id="{{ 'item' + $index }}" class="modal fade" role="dialog">
                               <div class="modal-dialog">
 
-                                <!-- Modal content-->
                                 <div class="modal-content">
                                   <div class="modal-body ">
  
@@ -76,22 +79,61 @@
                                 </div>
 
                               </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
 
-                <div class="panel contact" ng-show="panel.isSelected(2)">
-                        <p class="contactTitle">RESUME</p>
-                        <p class="contactForm">
-                            <br>View <a href="resume.pdf">PDF</a>
+                <div class="panel resume" ng-show="panel.isSelected(2)">
+                    <p class="viewpdf"><i class="fa fa-hand-o-right"></i> <a href="resume.pdf" class="pdf">View PDF</a> <i class="fa fa-hand-o-left"></i></p>
+
+                    <div class="row">
+                        <div class="small-12 large-7 medium-offset-1 columns">
+                            <div class="row">
+                                <div class=" columns">
+                                    <h2>Work Experience</h2>
+
+
+                                    <div class="work" ng-controller="workController">
+                                        <div ng-repeat="i in work" class="workItem">
+                                           <div class="callout small">
+                                              <h3>{{ i.title }}</h3>
+                                              <h4>{{ i.company }} // {{ i.date }}</h4> 
+                                              <p></p>
+                                            </div>
+                                        </div>
+                                    </div>     
+
+                                    
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="columns">
+                                    <h2>Education</h2>
+                                    <div class="callout small">
+                                      <h3>Honors Bachelor of Computer Science <span class="option">- Software Engineering Option</span></h3>
+                                      <h4>University of Waterloo // 2011 - 2016</h4> 
+                                    </div>
+                                    <div class="callout small">
+                                      <h3>Honors Bachelor of Business Administration <span class="option">- Marketing Specialization</span></h3>
+                                      <h4>Wilfrid Laurier University // 2011 - 2016</h4> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class=" columns">
+                                    <h2>Recreational</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="medium-11 large-2 medium-offset-1 columns">
+                            <h2 class="largecenter">Skills</h2>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="panel contact" ng-show="panel.isSelected(3)">
-                        <p class="contactTitle">Contact</p>
-                        <p class="contactForm">
-                            <br>Feel free to <a href="http://sites.strawberry-tenshi.net/#contact">contact me</a>, or send me a note on gmail - bernicewygo
-                </div>                  
+                            <br>Feel free to <a href="http://sites.strawberry-tenshi.net/#contact">contact me</a>, or send me a note on gmail - bernicewygo                  
                 </div>
 
       
@@ -103,20 +145,17 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container text-center">
+        <div class="text-center">
             <p>Copyright &copy; Bernice Go 2015</p>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="bower_components/foundation-sites/dist/foundation.js"></script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/lightbox.js"></script>   
-    <script src="bower_components/stellar.js/src/jquery.stellar.js"></script>
-    <script src="bower_components/waypoints/lib/noframework.waypoints.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-recaptcha/release/angular-recaptcha.min.js"></script>
     <script src="js/bernice.js"></script>
     <script src="js/portfolio.js"></script>
 </body>

@@ -2,7 +2,7 @@
 
 	var dataget;
 
-	var app = angular.module('portfolio', ['vcRecaptcha']); 
+	var app = angular.module('portfolio', []); 
 
 	app.controller('portfolioController', function($scope, $http, $sce) {
 	  $http.get('http://bernicewygo.github.io/portfolio.json')
@@ -15,8 +15,19 @@
          };       
 	});
 
+	app.controller('workController', function($scope, $http, $sce) {
+	  $http.get('http://bernicewygo.github.io/work.json')
+	       .then(function(response){
+	          $scope.work = response.data;                
+	        });
+
+		$scope.getHTMLvalue = function(html) {
+          return $sce.trustAsHtml(html);	
+         };       
+	});
+
 	app.controller("panelController", function() {
-		this.tab = 1; 
+		this.tab = 2; 
 
 		this.selectTab = function(setTab) {
 			this.tab = setTab;
@@ -27,37 +38,5 @@
 		};
 	});
 
-	app.controller('recapCtrl',['vcRecaptchaService','$http',function(vcRecaptchaService,$http){
-		var vm = this;
-		vm.publicKey = "6LcE5xETAAAAAGG3ULuCu5KRfin25iGCRaV33-Bz";
-		
-		vm.signup = function(){
-			
-			/* vcRecaptchaService.getResponse() gives you the g-captcha-response */
-			
-			if(vcRecaptchaService.getResponse() === ""){ //if string is empty
-				alert("Please resolve the captcha and submit!")
-			}else {
-				var post_data = {  //prepare payload for request
-					'name':vm.name,
-					'email':vm.email,
-					'message':vm.message,
-					'g-recaptcha-response':vcRecaptchaService.getResponse()  //send g-captcah-reponse to our server
-				}
-				
-				/* Make Ajax request to our server with g-captcha-string */
-				$http.post('http://strawberry-tenshi.net/api',post_data).success(function(response){
-					if(response.error === 0){
-						alert("Messaged");
-					}else{
-						alert("User verification failed");
-					}
-				})
-				.error(function(error){
-				
-				})
-			}
-		}
-	}]);
 
 })();
