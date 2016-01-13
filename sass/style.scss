@@ -28,13 +28,31 @@ h2 {
 	&:hover {
 	color: $color-blue;
 	opacity: 0.6;
+		&::first-letter {
+			color: $color-blue;
+		}
 	}
 
 	&::first-letter {
 	color: $color-light;	
-	opacity: 1 !important;	
+
+
 	}
 }
+
+h3 {
+	font-family: $font; 
+	font-size: 1.3em;
+	line-height: 1.3em;
+	margin-bottom: -3px; 
+}
+
+h4 {
+	font-family: $font; 
+	font-size: 0.8em;
+	line-height: 0.8em;
+}
+
 /* ===========
        IDs 
    =========== */
