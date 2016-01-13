@@ -1,4 +1,4 @@
-/* line 9, ../sass/style.scss */
+/* line 11, ../sass/style.scss */
 html, body {
   margin: 0px;
   padding: 0px;
@@ -8,12 +8,12 @@ html, body {
   height: 100%;
 }
 
-/* line 18, ../sass/style.scss */
+/* line 20, ../sass/style.scss */
 a {
   color: #336699;
 }
 
-/* line 22, ../sass/style.scss */
+/* line 24, ../sass/style.scss */
 h2 {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
@@ -21,39 +21,48 @@ h2 {
   color: #D8D8D8;
   transition: color 0.5s ease;
 }
-/* line 28, ../sass/style.scss */
+/* line 30, ../sass/style.scss */
 h2:hover {
   color: #336699;
   opacity: 0.6;
 }
-/* line 31, ../sass/style.scss */
+/* line 33, ../sass/style.scss */
 h2:hover::first-letter {
   color: #336699;
 }
-/* line 36, ../sass/style.scss */
+/* line 38, ../sass/style.scss */
 h2::first-letter {
   color: #C0C0C0;
 }
 
-/* line 43, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 h3 {
   font-family: "Oswald", sans-serif;
   font-size: 1.3em;
-  line-height: 1.3em;
-  margin-bottom: -3px;
+  line-height: 1.2em;
+  margin-bottom: -0.25px;
+  color: #336699;
 }
 
-/* line 50, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 h4 {
   font-family: "Oswald", sans-serif;
   font-size: 0.8em;
-  line-height: 0.8em;
+  line-height: 1em;
+  color: #999999;
+}
+
+/* line 60, ../sass/style.scss */
+p {
+  font-family: "Oswald", sans-serif;
+  font-size: 0.7em;
+  color: #333333;
 }
 
 /* ===========
        IDs 
    =========== */
-/* line 60, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 footer {
   font-size: .7em;
   height: 2em;
@@ -61,25 +70,25 @@ footer {
   color: #C0C0C0;
 }
 
-/* line 67, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 #nav a {
   margin-top: -15px;
   color: #336699;
   transition: color 0.5s ease;
 }
-/* line 72, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 #nav a:hover {
   color: #C0C0C0;
 }
 
-/* line 77, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 #subtitle {
   text-align: center;
   margin-top: -10px;
   background: #F0F0F0;
 }
 
-/* line 83, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 #title {
   font-size: 2.4em;
   text-align: center;
@@ -90,7 +99,7 @@ footer {
 /* ===========
       class
    =========== */
-/* line 94, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 .active a {
   background: #336699;
   color: #fff !important;
@@ -99,23 +108,23 @@ footer {
   transition: color 0.5s ease;
 }
 
-/* line 104, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 .center {
   text-align: center;
 }
 
-/* line 108, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 .navbar {
   background: #F0F0F0;
 }
 
-/* line 112, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
 .pdf {
   padding-left: 20px;
   padding-right: 20px;
   transition: padding 0.5s ease;
 }
-/* line 116, ../sass/style.scss */
+/* line 126, ../sass/style.scss */
 .pdf:hover {
   -webkit-animation: backforth 0.7s infinite alternate;
   -moz-animation: backforth 0.7s infinite alternate;
@@ -123,28 +132,34 @@ footer {
   animation: backforth 0.7s infinite alternate;
 }
 
-/* line 124, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 .resume {
   text-align: left;
 }
 
-/* line 127, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 .row {
   padding-left: 0px;
 }
 
-/* line 131, ../sass/style.scss */
-.push {
-  height: 0em;
+/* line 141, ../sass/style.scss */
+.option {
+  color: #C0C0C0;
+  font-size: 1em;
 }
 
-/* line 135, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
+.push {
+  height: 4em;
+}
+
+/* line 149, ../sass/style.scss */
 .viewpdf {
   padding-top: 20px;
   text-align: center;
 }
 
-/* line 140, ../sass/style.scss */
+/* line 154, ../sass/style.scss */
 .wrapper {
   min-height: 100%;
   height: auto !important;
@@ -152,9 +167,15 @@ footer {
   margin: 0 auto -3em;
 }
 
-/* ===========
-    transition
-   =========== */
+/* =============
+    large screen
+   ============= */
+@media only screen and (min-width: 64.063em) {
+  /* line 165, ../sass/style.scss */
+  .largecenter {
+    text-align: center;
+  }
+}
 @-webkit-keyframes backforth {
   0% {
     padding-left: 20px;

@@ -1,8 +1,10 @@
 $color-text: #333333;
+$color-dark: #999999;
 $color-light: #C0C0C0;
 $color-lighter: #D8D8D8;
 $color-lightest: #F0F0F0;
 $color-blue: #336699;
+$color-lightblue: #538cc6; 
 $color-white: #fff;
 $font:'Oswald', sans-serif;
 
@@ -43,14 +45,22 @@ h2 {
 h3 {
 	font-family: $font; 
 	font-size: 1.3em;
-	line-height: 1.3em;
-	margin-bottom: -3px; 
+	line-height: 1.2em;
+	margin-bottom: -0.25px; 
+	color: $color-blue;
 }
 
 h4 {
 	font-family: $font; 
 	font-size: 0.8em;
-	line-height: 0.8em;
+	line-height: 1em;
+	color: $color-dark;
+}
+
+p {
+	font-family: $font; 
+	font-size: 0.7em;
+	color: $color-text;	
 }
 
 /* ===========
@@ -128,8 +138,12 @@ footer {
 	padding-left: 0px; 
 }
 
+.option {
+	color: $color-light;
+	font-size: 1em;
+}
 .push {
-	height: 0em;
+	height: 4em;
 }
 
 .viewpdf {
@@ -144,9 +158,15 @@ footer {
 	margin: 0 auto -3em; 	
 }
 
-/* ===========
-    transition
-   =========== */
+/* =============
+    large screen
+   ============= */
+@media only screen and (min-width: 64.063em) { 
+	.largecenter {
+		text-align: center;
+	}
+}
+
 
  @-webkit-keyframes backforth {
   0%   { padding-left: 20px; 

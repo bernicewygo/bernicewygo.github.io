@@ -15,6 +15,17 @@
          };       
 	});
 
+	app.controller('workController', function($scope, $http, $sce) {
+	  $http.get('http://bernicewygo.github.io/work.json')
+	       .then(function(res){
+	          $scope.infos = res.data;                
+	        });
+
+		$scope.getHTMLvalue = function(html) {
+          return $sce.trustAsHtml(html);	
+         };       
+	});
+
 	app.controller("panelController", function() {
 		this.tab = 2; 
 
