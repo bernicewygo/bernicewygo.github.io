@@ -16,6 +16,7 @@
     <link href="bower_components/foundation-sites/dist/foundation-flex.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/lightbox.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="bower_components/tooltipster-master/css/tooltipster.css" />
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -37,13 +38,15 @@
             <header class="navbar">
             <div id="title">BERNICE GO</div>
                 <p id="subtitle">A FREELANCE WEB & GRAPHICS DESIGNER</p>
-                <div class="row">            
-                    <div id="nav" ng-init="tab = 2" class="center">
-                        <ul class="menu simple expanded navmenu">
-                            <li ng-class="{ active:panel.isSelected(1) }"><a href ng-click="panel.selectTab(1)" class="navi center">portfolio</a></li>
-                            <li ng-class="{ active:panel.isSelected(2) }"><a href ng-click="panel.selectTab(2)" class="navi center">resume</a></li>
-                            <li ng-class="{ active:panel.isSelected(3) }"><a href ng-click="panel.selectTab(3)" class="navi center">contact</a></li>
-                        </ul>
+                <div class="row">
+                    <div class="small-12 columns">           
+                        <div id="nav" ng-init="tab = 3" class="center">
+                            <ul class="menu simple expanded navmenu center">
+                                <li ng-class="{ active:panel.isSelected(1) }" class="center"><a href ng-click="panel.selectTab(1)" class="navi center">portfolio</a></li>
+                                <li ng-class="{ active:panel.isSelected(3) }" class="center"><a href ng-click="panel.selectTab(3)" class="navi center">hello!</a></li>
+                                <li ng-class="{ active:panel.isSelected(2) }" class="center"><a href ng-click="panel.selectTab(2)" class="navi center">resume</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -56,30 +59,6 @@
                                 <a ng-switch-when="" ng-href="img/portfolio/{{i.img}}" data-lightbox="port"><img ng-src="img/portfolio/{{i.img}}" class="portfolioImg" ng-alt="{{ i.title }}" /></a>
                                 <a ng-switch-default ng-href="img/portfolio/{{i.link}}" data-lightbox="port"><img ng-src="img/portfolio/{{i.img}}" class="portfolioImg" ng-alt="{{ i.title }}" /></a>
                             </span>
-                            <!-- Modal 
-                            <div ng-attr-id="{{ 'item' + $index }}" class="modal fade" role="dialog">
-                              <div class="modal-dialog">
-
-                                <div class="modal-content">
-                                  <div class="modal-body ">
- 
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <div class="portfolioInfo">
-                                        <span ng-switch on="'{{i.link}}'" class="modalbox">
-                                            <img ng-switch-when="" ng-src="img/portfolio/{{i.img}}" class="modalimg">
-                                            <img ng-switch-default ng-src="img/portfolio/{{i.link}}" class="modalimg">
-                                        </span>
-                                        <p class="modalbox">
-                                        <span class="portfolioType">{{ i.type }}</span>
-                                        <span class="portfolioTitle">{{ i.title }}</span>
-                                        <span class="portfolioDesc"  ng-bind-html="getHTMLvalue(i.description)"></span>
-                                        </p>
-                                    </div>
-                                  </div>
-                                </div>
-
-                              </div>
-                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -126,14 +105,37 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="medium-11 large-2 medium-offset-1 columns">
-                            <h2 class="largecenter">Skills</h2>
+                        <div class="medium-11 large-3 columns">
+                            <h2 class="largecenter" id="skills">Skills</h2>
+                            <div class="center">
+                                <img src="img/icons/ai.png" class="icon" title="Illustrator">
+                                <img src="img/icons/id.png" class="icon" title="InDesign">
+                                <img src="img/icons/ps.png" class="icon" title="Photoshop">
+                                <br>
+                                <img src="img/icons/angularjs.png" class="icon" title="AngularJS">
+                                <img src="img/icons/cpp.png" class="icon" title="C++">
+                                <img src="img/icons/javascript.png" class="icon" title="Javascript">
+                                <img src="img/icons/jquery.png" class="icon" title="JQuery">
+                                <br>
+                                <img src="img/icons/bootstrap.png" class="icon" title="Bootstrap">
+                                <img src="img/icons/foundation.png" class="icon" title="Foundation">
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="panel contact" ng-show="panel.isSelected(3)">
-                            <br>Feel free to <a href="http://sites.strawberry-tenshi.net/#contact">contact me</a>, or send me a note on gmail - bernicewygo                  
+
+                            <p>Welcome to my online portfolio! 
+                            </p>
+
+                            <p>Feel free to <a href="http://sites.strawberry-tenshi.net/#contact">contact me</a>, or send me a note on gmail - bernicewygo</p>        
+
+                            <p class="links">
+                                <a href="https://github.com/bernicewygo" class="link" title='<i class="fa fa-github"></i>'>GitHub </a> //
+                                <a href="https://www.linkedin.com/in/bernicewygo" class="link" title='<i class="fa fa-linkedin-square"></i>'>LinkedIn</a> // 
+                                <a href="http://youtube.com/icedude999" class="link" title='<i class="fa fa-youtube"></i>'>Youtube</a>
+                            </p>          
                 </div>
 
       
@@ -146,7 +148,7 @@
     <!-- Footer -->
     <footer>
         <div class="text-center">
-            <p>Copyright &copy; Bernice Go 2015</p>
+            <p>Copyright &copy; Bernice Go 2016</p>
         </div>
     </footer>
 
@@ -156,8 +158,15 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/lightbox.js"></script>   
     <script src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/tooltipster-master/js/jquery.tooltipster.min.js"></script>
     <script src="js/bernice.js"></script>
     <script src="js/portfolio.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.tooltip').tooltipster();
+        });
+    </script>
 </body>
 
 </html>

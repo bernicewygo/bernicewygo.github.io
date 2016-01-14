@@ -27,7 +27,7 @@
 	});
 
 	app.controller("panelController", function() {
-		this.tab = 2; 
+		this.tab = 3; 
 
 		this.selectTab = function(setTab) {
 			this.tab = setTab;
@@ -37,6 +37,20 @@
 
 		};
 	});
+  
+	$('.icon').hover(function(){
+		$('#skills').text($(this).attr('title'));
+	},function(){
+		$('#skills').text("skills");
+		});
 
-
+	$('.link').hover(function(){
+		$link = $(this).text();
+		$title = $(this).attr('title');
+		$(this).html($title);
+		$(this).attr("title", "");
+	},function(){
+		$(this).text($link);
+		$(this).attr("title",$title);
+		});
 })();
