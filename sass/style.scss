@@ -63,6 +63,11 @@ p {
 	color: $color-text;	
 }
 
+hr {
+	margin-top: 0px; 
+	margin-bottom: 0px; 
+}
+
 /* ===========
        IDs 
    =========== */
@@ -121,6 +126,10 @@ footer {
 	}
 }
 
+.info {
+	font-size: 0.7em !important;
+}
+
 .icon {
 	width: 50px; 
 	padding-bottom: 5px; 
@@ -130,6 +139,10 @@ footer {
 	&:hover {
 		opacity: 1; 
 	}
+}
+
+.left {
+	text-align: left;
 }
 
 .links  {
