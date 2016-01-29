@@ -132,11 +132,6 @@ footer {
 		font-size: 1em; 
 	}
 }
-
-.info {
-	font-size: 0.7em !important;
-}
-
 .icon {
 	width: 50px; 
 	padding-bottom: 5px; 
@@ -147,6 +142,11 @@ footer {
 		opacity: 1; 
 	}
 }
+
+.info {
+	font-size: 0.7em !important;
+}
+
 
 .left {
 	text-align: left;
@@ -231,6 +231,16 @@ footer {
 	}
 }
 
+
+.projectsImg {
+	width: 100px;  	
+	opacity: .7; 
+	transition: 0.5s ease;
+
+	&:hover {
+		opacity: 1; 
+	}
+}
 .push {
 	height: 4em;
 }
