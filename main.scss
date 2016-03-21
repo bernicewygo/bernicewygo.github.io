@@ -135,6 +135,8 @@ md-tooltip {
   width: 500px; 
 }
 
+
+
 .resume {
   width: 1020px;
 }
@@ -162,5 +164,11 @@ md-tooltip {
 @media (max-width:1490px){
   .resume {
     width:500px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+    .mobflex {
+    display: flex;
   }
 }
