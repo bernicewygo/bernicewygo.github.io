@@ -45,11 +45,11 @@
                 <md-card-actions layout="row" layout-align="end center">
                     <md-content layout-padding="" class="year">{{p.year}}</md-content>
                     <div flex></div>
-                    <md-button class="md-primary md-raised md-hue-1" >
-                        <md-tooltip md-direction="bottom">
+                    <md-button class="md-primary md-raised md-hue-1"  ng-click="showModal(p.modal)">
+                        <md-tooltip md-direction="bottom"  ng-if='!p.if'>
                           Check back later!
                         </md-tooltip>
-                        Discover
+                        Explore
                     </md-button>
                 </md-card-actions>
             </md-card>
