@@ -5,7 +5,8 @@
     "title": "Tamaneko Background",
     "type": "Vector",
     "description": "Desktop background design of my signature character, Tamaneko",
-    "link": ""
+    "link": "",
+    "show": false
   },
   {
     "img": "grr-membership.png",
@@ -13,7 +14,8 @@
     "title": "Grand River Rocks",
     "type": "Design",
     "description": "Membership card design contest entry",
-    "link": ""
+    "link": "",
+    "show": false
   },
     {
     "img": "hearthstats.png",
@@ -21,7 +23,8 @@
     "title": "Hearthstats",
     "type": "Vector",
     "description": "newsletter vectors",
-    "link": ""
+    "link": "",
+    "show": false
   },
   {
     "img": "neurecall_homepage.png",
@@ -29,7 +32,8 @@
     "title": "NeuRecall",
     "type": "Web Design",
     "description": "homepage",
-    "link": "1-1.jpg"
+    "link": "1-1.jpg",
+    "show": false
   },
   {
     "img": "neurecall_logo.png",
@@ -37,7 +41,8 @@
     "title": "NeuRecall",
     "type": "Logo",
     "description": "",
-    "link": ""
+    "link": "",
+    "show": false
   },
   {
     "img": "neurecall_personas.png",
@@ -45,7 +50,8 @@
     "title": "NeuRecall",
     "type": "Vector",
     "description": "personas",
-    "link": "1-1.png"
+    "link": "1-1.png",
+    "show": false
   },
   {
     "img": "notyouraveragenetizens.png",
@@ -53,7 +59,8 @@
     "title": "Not Your Average Netizens",
     "type": "Logo",
     "description": "",
-    "link": ""
+    "link": "",
+    "show": false
   },
   {
     "img": "0001.png",
@@ -61,6 +68,7 @@
     "title": "Bottle Birdies",
     "type": "Commission",
     "description": "",
-    "link": ""
+    "link": "",
+    "show": false
   }
 ]
