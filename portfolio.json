@@ -1,5 +1,14 @@
 [
   {
+    "img": "isometric_fruits.png",
+    "year": 2016,
+    "title": "Isometric Fruits",
+    "type": "Vector",
+    "description": "Isometric fruit designs",
+    "link": "",
+    "show": false
+  },
+  {
     "img": "tamanekobg.png",
     "year": 2015,
     "title": "Tamaneko Background",
